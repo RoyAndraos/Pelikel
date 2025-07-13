@@ -63,15 +63,18 @@ const ImageWrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
+  height: 40vh;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: ${float} 4s ease-in-out infinite;
   cursor: pointer; /* ✅ fix: remove quotes! */
+  padding: 0;
+  margin: 0;
+  @media (max-width: 1000px) {
+    height: 50vh;
+  }
 `;
 
 export default Cloud;
