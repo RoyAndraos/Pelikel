@@ -27,53 +27,38 @@ const Cloud = () => {
 
   return (
     <ImageWrapper onClick={handleClick}>
-      <Click>Click Me!</Click>
+      <Click>click me</Click>
     </ImageWrapper>
   );
 };
-const float = keyframes`
-  0% {
-    transform: translate(-50%, -50%) translate(0, 0);
-  }
-  25% {
-    transform: translate(-50%, -50%) translate(10px, -10px);
-  }
-  50% {
-    transform: translate(-50%, -50%) translate(20px, 0);
-  }
-  75% {
-    transform: translate(-50%, -50%) translate(10px, 10px);
-  }
-  100% {
-    transform: translate(-50%, -50%) translate(0, 0);
-  }
-`;
+
 const Click = styled.span`
   position: absolute;
-  top: 50%;
+  bottom:-1vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   cursor: pointer;
   user-select: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: "Helvetica", Sans-Serif;
+  font-weight: 600;
+  color: whitesmoke;
+  opacity:0.8;
 `;
 const ImageWrapper = styled.div`
-  background-image: url("/cloud.svg");
+  background-image: url("/cloudNew.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40vh;
+  height: 20vh;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ${float} 4s ease-in-out infinite;
-  cursor: pointer; /* ✅ fix: remove quotes! */
+  cursor: pointer; 
   padding: 0;
   margin: 0;
   @media (max-width: 1000px) {
-    height: 50vh;
+    height: 20vh;
   }
 `;
 
