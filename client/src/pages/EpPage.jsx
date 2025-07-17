@@ -1,6 +1,6 @@
 import React from "react";
-import Back from "./Back";
-import { Header } from "./wiki/WikiPage";
+import Back from "./utils/Back";
+import { Header } from "./WikiPage";
 
 const EpPage = () => {
   return (

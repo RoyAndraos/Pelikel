@@ -1,14 +1,19 @@
-import Back from "./Back";
+import Back from "./utils/Back";
 import styled from "styled-components";
-import { TitleWrap, Header } from "./wiki/WikiPage";
+import { TitleWrap, Header } from "./WikiPage";
+import { StyledNavlink, Title } from "./utils/Logo";
+
 const AetherPage = () => {
   return (
     <div>
       <Header>
-        <Back />{" "}
+        <Back /> <div></div>
         <TitleWrap>
-          <h1>Countdown to release</h1>
+          <h1>coming soon</h1>
         </TitleWrap>
+        <StyledNavlink to="/" visible={true}>
+          <Title style={{ opacity: 1 }}>pēlikel</Title>
+        </StyledNavlink>
       </Header>
       <ContentWrapper>
         <Line key={"1"} style={{ width: "350px" }}></Line>
@@ -40,6 +45,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  font-size: 23px;
 `;
 const Line = styled.div`
   height: 25px;

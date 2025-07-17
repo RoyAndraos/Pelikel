@@ -1,11 +1,9 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 import { CloudWrapper, Cloud, StyledLink } from "./CloudWiki";
 
-const CloudAether = ({ cloudAether }) => {
+const CloudAether = ({ cloudAether, visible }) => {
   return (
     <CloudWrapper ref={cloudAether}>
-      <StyledLink to="/cloudAether">
+      <StyledLink to="/cloudAether" visible={visible}>
         <Cloud src="/clouds/cloudAether.svg" alt="cloud" />
         aether voyage
       </StyledLink>

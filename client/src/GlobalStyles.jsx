@@ -9,7 +9,7 @@ body{
     *{
         @font-face {
   font-family: 'mom';
-  src: url('/font/Mom.woff2') format('opentype');
+  src: url('/font/zai_OlivettiLettera22Typewriter.woff2') format('opentype');
 }
         margin:0;
         color:whitesmoke;

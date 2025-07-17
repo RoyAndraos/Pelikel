@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { CloudWrapper, StyledLink, Cloud } from "./CloudWiki";
+import { StyledLink, Cloud } from "./CloudWiki";
+import styled from "styled-components";
 
 const CloudClickMe = ({ played, setPlayed, setPlayedCount }) => {
   const [soundId, setSoundId] = useState(0);
@@ -54,5 +55,12 @@ const CloudClickMe = ({ played, setPlayed, setPlayedCount }) => {
     </CloudWrapper>
   );
 };
+const CloudWrapper = styled.div`
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: default !important;
+`;
 
 export default CloudClickMe;

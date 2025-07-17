@@ -2,11 +2,14 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import WikiPage from "./pages/wiki/WikiPage";
+import WikiPage from "./pages/WikiPage";
 import { useState } from "react";
 import AetherPage from "./pages/AetherPage";
-import ShowsPage from "./pages/ShowsPage";
 import EpPage from "./pages/EpPage";
+import Shows from "./pages/Shows";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+
 const App = () => {
   const [played, setPlayed] = useState(false);
   const [playedCount, setPlayedCount] = useState(0);
@@ -27,8 +30,10 @@ const App = () => {
         />
         <Route path="/cloudWiki" element={<WikiPage />} />
         <Route path="/cloudAether" element={<AetherPage />} />
-        <Route path="/cloudShows" element={<ShowsPage />} />
         <Route path="/cloud???" element={<EpPage />} />
+        <Route path="/shows" element={<Shows />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Background src="/background.svg" alt="blue linear gradient" />
     </Wrapper>
