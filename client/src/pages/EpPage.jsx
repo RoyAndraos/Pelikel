@@ -1,10 +1,14 @@
 import React from "react";
 import Back from "./Back";
+import { Header } from "./wiki/WikiPage";
 
 const EpPage = () => {
   return (
     <div>
-      <Back />
+      <Header>
+        {" "}
+        <Back />
+      </Header>
     </div>
   );
 };

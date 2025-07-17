@@ -50,7 +50,7 @@ const CloudClickMe = ({ played, setPlayed, setPlayedCount }) => {
       }}
     >
       <Cloud src="/clouds/cloudClickMe.svg" alt="cloud" />
-      <StyledLink>click me</StyledLink>
+      <StyledLink>click me!</StyledLink>
     </CloudWrapper>
   );
 };

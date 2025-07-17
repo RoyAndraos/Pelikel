@@ -1,10 +1,13 @@
 import React from "react";
 import Back from "./Back";
+import { Header } from "./wiki/WikiPage";
 
 const ShowsPage = () => {
   return (
     <div>
-      <Back />
+      <Header>
+        <Back />
+      </Header>
     </div>
   );
 };

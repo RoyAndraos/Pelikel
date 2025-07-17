@@ -36,6 +36,7 @@ const AetherPage = () => {
 const ContentWrapper = styled.div`
   font-family: "mom";
   display: flex;
+  letter-spacing: 0.1rem;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;

@@ -6,7 +6,7 @@ const CloudWiki = ({ cloudWiki }) => {
     <CloudWrapper ref={cloudWiki}>
       <StyledLink to="/cloudWiki">
         <Cloud src="/clouds/cloudWiki.svg" alt="cloud" />
-        wiki
+        cloud wiki
       </StyledLink>
     </CloudWrapper>
   );
@@ -22,7 +22,6 @@ export const Cloud = styled.img`
 `;
 
 export const StyledLink = styled(NavLink)`
-  text-decoration: none;
   font-size: 18px;
   color: whitesmoke;
   display: flex !important;

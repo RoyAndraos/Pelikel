@@ -7,7 +7,7 @@ const CloudAether = ({ cloudAether }) => {
     <CloudWrapper ref={cloudAether}>
       <StyledLink to="/cloudAether">
         <Cloud src="/clouds/cloudAether.svg" alt="cloud" />
-        aether
+        aether voyage
       </StyledLink>
     </CloudWrapper>
   );

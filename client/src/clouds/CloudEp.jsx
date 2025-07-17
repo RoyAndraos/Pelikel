@@ -4,7 +4,7 @@ const CloudEp = ({ cloudEpRef }) => {
     <CloudWrapper ref={cloudEpRef}>
       <StyledLink to="/cloud???">
         <Cloud src="/clouds/cloudEp.svg" alt="cloud" />
-        (???)
+        [???]
       </StyledLink>
     </CloudWrapper>
   );
