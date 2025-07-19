@@ -5,7 +5,7 @@ const CloudWiki = ({ cloudWiki, visible }) => {
   return (
     <CloudWrapper ref={cloudWiki}>
       <StyledLink to="/cloudWiki" visible={visible}>
-        <Cloud src="/clouds/cloudWiki.svg" alt="cloud" />
+        <Cloud src="/clouds/cloudWiki.svg" alt="" />
         cloud wiki
       </StyledLink>
     </CloudWrapper>

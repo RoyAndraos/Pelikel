@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
       </Routes>
 
-      <Background src="/background.svg" alt="blue linear gradient" />
+      <Background src="/background.svg" alt="" />
     </Wrapper>
   );
 };

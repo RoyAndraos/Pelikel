@@ -14,7 +14,7 @@ const Shows = () => {
       </Header>
       <ContentWrapper>
         <a href="https://tally.so/r/mReMAv">
-          <Image src="/july.jpg" alt="flyer" />
+          <Image src="/july.jpg" alt="" />
         </a>
         <br />
         <span style={{ fontWeight: "bold" }}>Next show:</span> <br />

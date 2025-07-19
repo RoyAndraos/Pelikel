@@ -19,7 +19,7 @@ const WikiPage = () => {
       <ContentWrap>
         <div>
           <ImageInfoWrap style={{ marginBottom: "2vh" }}>
-            <StyledImage src="/wiki/cumulus.svg" alt="cumulus cloud" />
+            <StyledImage src="/wiki/cumulus.svg" alt="" />
             <div>
               <BoldItal>cumulus</BoldItal>
               <Reg>/ˈkjuːmjʊləs/</Reg>
@@ -50,7 +50,7 @@ const WikiPage = () => {
             <StyledImage
               style={{ width: "8vw" }}
               src="/wiki/cumulusHumilis.svg"
-              alt="cumulus humilis cloud"
+              alt=""
             />
             <div>
               <H2>cumulus Humilis</H2>
@@ -70,7 +70,7 @@ const WikiPage = () => {
           </ImageInfoWrap>
         </div>
         <ImageInfoWrap>
-          <StyledImage src="/wiki/stratus.svg" alt="stratus cloud" />
+          <StyledImage src="/wiki/stratus.svg" alt="" />
           <div>
             <BoldItal>stratus</BoldItal> <Reg>/ˈstreɪtəs/</Reg>{" "}
             <Reg>STRAY-tuhs</Reg>
@@ -92,7 +92,7 @@ const WikiPage = () => {
           </div>
         </ImageInfoWrap>
         <ImageInfoWrap>
-          <StyledImage src="/wiki/cumulonimbus.svg" alt="cumulonimbus cloud" />
+          <StyledImage src="/wiki/cumulonimbus.svg" alt="" />
           <div>
             <BoldItal>cumulonimbus</BoldItal>
             <Reg>/ˌkjuːmjʊləʊˈnɪmbəs/</Reg>
@@ -116,7 +116,7 @@ const WikiPage = () => {
           </div>
         </ImageInfoWrap>
         <ImageInfoWrap>
-          <StyledImage src="/wiki/cirrus.svg" alt="cirrus cloud" />
+          <StyledImage src="/wiki/cirrus.svg" alt="" />
           <div>
             <BoldItal>cirrus</BoldItal>
             <Reg>/ˈsɪrəs/</Reg>
@@ -140,7 +140,7 @@ const WikiPage = () => {
           </div>
         </ImageInfoWrap>
         <ImageInfoWrap>
-          <StyledImage src="/wiki/altocumulus.svg" alt="alto cumulus cloud" />
+          <StyledImage src="/wiki/altocumulus.svg" alt="" />
           <div>
             <BoldItal>altocumulus</BoldItal>
             <Reg>/ˌæltəʊˈkjuːmjʊləs/</Reg>

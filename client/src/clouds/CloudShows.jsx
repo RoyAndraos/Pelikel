@@ -4,7 +4,7 @@ const CloudShows = ({ cloudShows }) => {
   return (
     <CloudWrapper ref={cloudShows}>
       <StyledLink to="/cloudShows">
-        <Cloud src="/clouds/cloudShows.svg" alt="cloud" />
+        <Cloud src="/clouds/cloudShows.svg" alt="" />
         shows
       </StyledLink>
     </CloudWrapper>

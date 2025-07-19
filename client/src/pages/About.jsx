@@ -14,7 +14,7 @@ const About = () => {
         </StyledNavlink>
       </Header>
       <ContentWrapper>
-        <Image src="/about.png" alt="band pic" />
+        <Image src="/about.png" alt="" />
 
         <Text>
           Pēlikel – from the French{" "}

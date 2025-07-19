@@ -7,11 +7,7 @@ const CloudEp = ({ cloudEpRef, visible }) => {
         visible={visible}
         style={{ textDecoration: "none" }}
       >
-        <Cloud
-          src="/clouds/cloudEp.svg"
-          alt="cloud"
-          style={{ width: "15vw" }}
-        />
+        <Cloud src="/clouds/cloudEp.svg" alt="" style={{ width: "15vw" }} />
         [???]
       </StyledLink>
     </CloudWrapper>
