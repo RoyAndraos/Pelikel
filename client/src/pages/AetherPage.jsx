@@ -2,9 +2,23 @@ import Back from "./utils/Back";
 import styled from "styled-components";
 import { TitleWrap, Header, SubTitle } from "./WikiPage";
 import { StyledNavlink, Title } from "./utils/Logo";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
 const AetherPage = () => {
-  const [countdown, setCountdown] = useState("");
+  const [countdown, setCountdown] = useState("00d 00h 00m 00s");
+  const text1Ref = useRef(null);
+  const text2Ref = useRef(null);
+
+  useEffect(() => {
+    gsap.to(text1Ref.current, {
+      opacity: 1,
+      duration: 2,
+    });
+    gsap.to(text2Ref.current, {
+      opacity: 1,
+      duration: 2,
+    });
+  }, []);
   useEffect(() => {
     const targetDate = new Date("2025-08-08T00:00:00");
 
@@ -55,12 +69,16 @@ const AetherPage = () => {
         <br />
         <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
           <Line key={"9"} style={{ width: "150px" }}></Line>
-          aether,
+          <span ref={text1Ref} style={{ opacity: 0 }}>
+            aether,
+          </span>
           <Line key={"11"} style={{ width: "100px" }}></Line>
         </div>
         <Line key={"12"} style={{ width: "325px" }}></Line>
         <Line key={"13"} style={{ width: "245px" }}></Line>
-        Will I ever learn about gravity?
+        <span ref={text2Ref} style={{ opacity: 0 }}>
+          Will I ever learn about gravity?
+        </span>
       </ContentWrapper>
     </div>
   );

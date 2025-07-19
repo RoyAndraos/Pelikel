@@ -21,30 +21,43 @@ const Footer = ({ played, playedCount }) => {
   }, [played]);
   return (
     <Wrapper ref={iconsRef}>
-      <Link href="https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx">
+      <Link
+        target="_blank"
+        href="https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx"
+      >
         <RiInstagramFill style={{ fontSize: "35px" }} />
       </Link>
-      <Link href="https://open.spotify.com/artist/4tiXJDgDwvcHMv77aA9Bb2?si=KcGSUKQuQzuC4WajpX4LrA">
+      <Link
+        target="_blank"
+        href="https://open.spotify.com/artist/4tiXJDgDwvcHMv77aA9Bb2?si=KcGSUKQuQzuC4WajpX4LrA"
+      >
         <FaSpotify style={{ fontSize: "33px" }} />
       </Link>
-      <Link href="https://music.apple.com/ca/artist/pēlikel/1579987164">
+      <Link
+        target="_blank"
+        href="https://music.apple.com/ca/artist/pēlikel/1579987164"
+      >
         <SiApplemusic style={{ fontSize: "30px" }} />
       </Link>
-      <Link href="https://youtube.com/@pelikelmusic?si=MeBUNEMJSoG4PBWN">
+      <Link
+        target="_blank"
+        href="https://youtube.com/@pelikelmusic?si=MeBUNEMJSoG4PBWN"
+      >
         <PiYoutubeLogoFill style={{ fontSize: "42px" }} />
       </Link>
-      <Link href="https://open.anghami.com/02kkBtz74Ub">
+      <Link target="_blank" href="https://open.anghami.com/02kkBtz74Ub">
         <Anghami src="/anghami.svg" />
       </Link>
     </Wrapper>
   );
 };
 const Wrapper = styled.div`
-  width: 30vw;
+  width: 20vw;
   height: 5vh;
   position: fixed;
   bottom: 3vh;
-  right: 0;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;

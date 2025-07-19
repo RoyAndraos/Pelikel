@@ -14,11 +14,14 @@ const Contact = () => {
       </Header>
 
       <ContentWrapper>
-        <div>Reach out to Pelikel!</div>
-        <div>For booking and inquiries:</div>
-        <a href="mailto:pelikelmusic@gmail.com" target="_blank">
-          pelikelmusic@gmail.com
-        </a>{" "}
+        <div>Reach out to Pēlikel!</div>
+        <br />
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          For booking and inquiries:
+          <a href="mailto:pelikelmusic@gmail.com" target="_blank">
+            pelikelmusic@gmail.com
+          </a>{" "}
+        </div>
       </ContentWrapper>
     </div>
   );
@@ -27,7 +30,8 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 20px;
 `;
 
 export default Contact;

@@ -1,25 +1,28 @@
-import React from "react";
 import Back from "./utils/Back";
-import { Header, TitleWrap } from "./WikiPage";
+import { Header } from "./WikiPage";
 import { StyledNavlink, Title } from "./utils/Logo";
+import styled from "styled-components";
 
 const EpPage = () => {
   return (
     <div>
       <Header>
         <Back />
-        <div></div>
-        <TitleWrap>
-          <h1 style={{ textAlign: "center" }}>
-            Nothing to see here. <br />I think I'll just lay for a while…
-          </h1>
-        </TitleWrap>
         <StyledNavlink to="/" visible={true}>
           <Title style={{ opacity: 1 }}>pēlikel</Title>
         </StyledNavlink>
       </Header>
+
+      <TitleWrap>
+        Nothing to see here. <br />I think I'll just lay for a while…
+      </TitleWrap>
     </div>
   );
 };
+const TitleWrap = styled.div`
+  text-align: center;
+  font-size: 20px;
+  line-height: 5vh;
+`;
 
 export default EpPage;

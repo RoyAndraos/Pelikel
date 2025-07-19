@@ -10,7 +10,7 @@ import { Header } from "./WikiPage";
 import Navbar from "../Navbar";
 import Logo from "./utils/Logo";
 gsap.registerPlugin(MotionPathPlugin);
-
+import Footer from "./utils/Footer";
 const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
   const cloudEp = useRef(null);
   const cloudAether = useRef(null);
@@ -115,14 +115,16 @@ const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
         />
         <CloudAether cloudAether={cloudAether} visible={played} />
       </Wrapper>
+      <Footer played={played} playedCount={playedCount} />
     </Container>
   );
 };
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 20vh 20vh;
-  place-content: center;
-  height: 100vh;
+  grid-template-rows: 30vh 20vh;
+  place-content: top;
+  height: 70vh;
+  gap: 5vh;
   align-items: center;
 `;
 
