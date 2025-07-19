@@ -3,12 +3,14 @@ import styled from "styled-components";
 const Logo = ({ titleRef, visible }) => {
   return (
     <StyledNavlink to="/" visible={visible}>
-      <Title ref={titleRef}>pēlikel</Title>
+      <Title ref={titleRef} style={{ fontSize: "45px" }}>
+        pēlikel
+      </Title>
     </StyledNavlink>
   );
 };
 export const Title = styled.h1`
-  font-size: 45px;
+  font-size: 35px;
   font-family: "mom";
   font-weight: unset;
   opacity: 0;

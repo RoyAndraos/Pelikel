@@ -9,6 +9,7 @@ import EpPage from "./pages/EpPage";
 import Shows from "./pages/Shows";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Footer from "./pages/utils/Footer";
 
 const App = () => {
   const [played, setPlayed] = useState(false);
@@ -35,6 +36,12 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer
+        played={played}
+        setPlayed={setPlayed}
+        setPlayedCount={setPlayedCount}
+        playedCount={playedCount}
+      />
       <Background src="/background.svg" alt="blue linear gradient" />
     </Wrapper>
   );

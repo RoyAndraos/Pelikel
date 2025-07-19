@@ -120,7 +120,8 @@ const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
 };
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 40vh 20vh;
+  grid-template-rows: 20vh 20vh;
+  place-content: center;
   height: 100vh;
   align-items: center;
 `;

@@ -13,7 +13,7 @@ const CloudWiki = ({ cloudWiki, visible }) => {
 };
 
 export const Cloud = styled.img`
-  width: 15vw;
+  width: 12vw;
   aspect-ratio: 1.5/1;
   cursor: pointer;
   @media (max-width: 798px) {

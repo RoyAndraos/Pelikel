@@ -1,15 +1,42 @@
 import Back from "./utils/Back";
 import styled from "styled-components";
-import { TitleWrap, Header } from "./WikiPage";
+import { TitleWrap, Header, SubTitle } from "./WikiPage";
 import { StyledNavlink, Title } from "./utils/Logo";
-
+import { useState, useEffect } from "react";
 const AetherPage = () => {
+  const [countdown, setCountdown] = useState("");
+  useEffect(() => {
+    const targetDate = new Date("2025-08-08T00:00:00");
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        clearInterval(interval);
+        setCountdown("It's time!");
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <Header>
         <Back /> <div></div>
         <TitleWrap>
-          <h1>coming soon</h1>
+          <h1>aether voyage</h1>
+          <SubTitle style={{ fontSize: "15px", marginTop: "10px" }}>
+            {countdown}
+          </SubTitle>
         </TitleWrap>
         <StyledNavlink to="/" visible={true}>
           <Title style={{ opacity: 1 }}>pēlikel</Title>

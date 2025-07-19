@@ -17,9 +17,11 @@ const Shows = () => {
           <Image src="/july.jpg" alt="flyer" />
         </a>
         <br />
-        Next show: <br />
+        <span style={{ fontWeight: "bold" }}>Next show:</span> <br />
         July 20 - at Turbo Haüs <br />
-        <a href="https://tally.so/r/mReMAv">Get your tickets.</a>
+        <a href="https://tally.so/r/mReMAv" target="_blank">
+          Get your tickets.
+        </a>
       </ContentWrapper>
     </div>
   );

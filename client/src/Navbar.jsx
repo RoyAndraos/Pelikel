@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import Tippy from "@tippyjs/react";
-import { MdContentCopy } from "react-icons/md";
 const Navbar = ({ navbarRef, visible }) => {
   {
     /* <Button as="a" href="mailto:pelikelmusic@gmail.com">
@@ -11,30 +9,14 @@ const Navbar = ({ navbarRef, visible }) => {
 
   return (
     <Wrapper ref={navbarRef}>
-      <StyledNavLink visible={visible}>
-        <Tippy
-          interactive={true}
-          placement="right"
-          content={
-            <a href="mailto:pelikelmusic@gmail.com">
-              <Button
-                onClick={() => {
-                  navigator.clipboard.writeText("pelikelmusic@gmail.com");
-                }}
-              >
-                pelikelmusic@gmail.com <MdContentCopy />
-              </Button>
-            </a>
-          }
-        >
-          <span>CONTACT</span>
-        </Tippy>
-      </StyledNavLink>
       <StyledNavLink to={"/about"} visible={visible}>
         ABOUT
       </StyledNavLink>
       <StyledNavLink to={"/shows"} visible={visible}>
         SHOWS
+      </StyledNavLink>
+      <StyledNavLink to={"/contact"} visible={visible}>
+        <span>CONTACT</span>
       </StyledNavLink>
     </Wrapper>
   );
@@ -44,7 +26,7 @@ const Wrapper = styled.div`
   top: 10vh;
   left: 2vw;
   display: flex;
-  height: 20vh;
+  height: 15vh;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
@@ -53,6 +35,7 @@ const Wrapper = styled.div`
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-family: sans-serif;
+  font-size: 20px;
   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
   &:hover {
     text-decoration: underline;

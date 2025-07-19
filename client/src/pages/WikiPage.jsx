@@ -10,7 +10,7 @@ const WikiPage = () => {
         <div></div>
         <TitleWrap>
           <h1>cloud wiki</h1>
-          <SubTitle>a nonexhaustive cloud-watcher's guide</SubTitle>
+          <SubTitle>a cloud-watcher's guide</SubTitle>
         </TitleWrap>
         <StyledNavlink to="/" visible={true}>
           <Title style={{ opacity: 1 }}>pēlikel</Title>
@@ -53,15 +53,18 @@ const WikiPage = () => {
               alt="cumulus humilis cloud"
             />
             <div>
-              <H2>Cumulus Humilis</H2>
+              <H2>cumulus Humilis</H2>
 
               <Reg>/ˈkjuːmjʊləs ˈhjuːmɪlɪs/</Reg>
               <Reg>KYOO-myuh-luhs HYOO-mih-liss</Reg>
               <Reg style={{ marginTop: "15px" }}>
-                Note: In the cumulus family, you may find the baby brother,
-                Cumulus humilis, a less voluminous, flatter form of cumulus that
-                stays low and doesn’t grow upward. A little, lonesome cloud,
-                hovering alone in the middle of the big, big, big blue sky :(
+                In the <span style={{ fontStyle: "italic" }}>cumulus</span>{" "}
+                family, you may find the baby brother,{" "}
+                <span style={{ fontStyle: "italic" }}>cumulus humilis</span> , a
+                less voluminous, flatter form of{" "}
+                <span style={{ fontStyle: "italic" }}>cumulus</span> that stays
+                low and doesn’t grow upward. A little, lonesome cloud, hovering
+                alone in the middle of the big, big, big blue sky :(
               </Reg>
             </div>
           </ImageInfoWrap>
@@ -76,7 +79,8 @@ const WikiPage = () => {
             <Reg>
               These form a thick, gray layer that covers the entire sky like a
               blanket. They are very low-level clouds, typically found below
-              2,000 meters. Once they touch the ground, stratus clouds get
+              2,000 meters. Once they touch the ground,{" "}
+              <span style={{ fontStyle: "italic" }}>stratus</span> clouds get
               promoted to the “fog” status :)
             </Reg>
             <H2>When they appear:</H2>
@@ -104,9 +108,10 @@ const WikiPage = () => {
             <H2>When they appear:</H2>
 
             <Reg>
-              On hot, humid days with strong rising air. Cumulonimbus clouds are
-              responsible for thunderstorms, lightning, heavy rain, hail, and
-              sometimes tornadoes (yikes!).
+              On hot, humid days with strong rising air.{" "}
+              <span style={{ fontStyle: "italic" }}>Cumulonimbus</span> clouds
+              are responsible for thunderstorms, lightning, heavy rain, hail,
+              and sometimes tornadoes (yikes!).
             </Reg>
           </div>
         </ImageInfoWrap>
@@ -120,9 +125,10 @@ const WikiPage = () => {
             <H2>Description:</H2>
 
             <Reg>
-              Cirrus clouds are high, thin, and wispy, made of ice crystals
-              (pretty!). They form at altitudes above 6,000 meters, often well
-              into the upper troposphere (whatever that means).
+              <span style={{ fontStyle: "italic" }}>Cirrus</span> clouds are
+              high, thin, and wispy, made of ice crystals (pretty!). They form
+              at altitudes above 6,000 meters, often well into the upper
+              troposphere (whatever that means).
             </Reg>
             <H2>When they appear:</H2>
 
@@ -144,9 +150,10 @@ const WikiPage = () => {
             <H2>Description:</H2>
 
             <Reg>
-              Altocumulus clouds appear as gray or white patches, often in
-              ripple-like patterns. They form in the middle level of the
-              atmosphere, between 2,000 and 6,000 meters.
+              <span style={{ fontStyle: "italic" }}>Altocumulus</span> clouds
+              appear as gray or white patches, often in ripple-like patterns.
+              They form in the middle level of the atmosphere, between 2,000 and
+              6,000 meters.
             </Reg>
 
             <H2>When they appear:</H2>
@@ -187,13 +194,12 @@ export const SubTitle = styled.h2`
 const ContentWrap = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  width: 91vw;
+  width: 99vw;
   top: 12vh;
   gap: 7vh;
   position: relative;
-  padding: 0 4vw;
 `;
 const ImageInfoWrap = styled.div`
   display: flex;

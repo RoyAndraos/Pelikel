@@ -14,23 +14,26 @@ const About = () => {
         </StyledNavlink>
       </Header>
       <ContentWrapper>
-        <Image src="/about.svg" alt="band pic" />
+        <Image src="/about.png" alt="band pic" />
 
         <Text>
-          Pēlikel – from the French “pellicule” – is a musical group from
-          Beirut, Lebanon, composed of Joey Semaan, Kevin Semaan, and Roy
-          Andraos, who debuted under that name in 2019. Having disparate
-          influences ranging from folk and pop to prog and classical music, each
-          member brings their own impressions to the table, creating an eclectic
-          and colorful musical style.
+          Pēlikel – from the French{" "}
+          <span style={{ fontStyle: "italic" }}> “pellicule” </span>– is a
+          musical group from Beirut, Lebanon, composed of Joey Semaan, Kevin
+          Semaan, and Roy Andraos, who debuted under that name in 2019. Having
+          disparate influences ranging from folk and pop to prog and classical
+          music, each member brings their own impressions to the table, creating
+          an eclectic and colorful musical style.
           <br />
-          <br /> This sonic blend first culminated in Shambles, an 8-track debut
-          record independently released in 2021. Half-sheltering itself under
-          the progressive rock umbrella, Shambles was the band’s canvas for
-          defining their sound and setting the stage for their evolution. With
-          the explosive drumming of Mark Bitar, the band put their music into
-          motion, propelling them from the Beirut music scene to Montreal
-          stages.
+          <br /> This sonic blend first culminated in{" "}
+          <span style={{ fontStyle: "italic" }}>Shambles</span>, an 8-track
+          debut record independently released in 2021. Half-sheltering itself
+          under the progressive rock umbrella,{" "}
+          <span style={{ fontStyle: "italic" }}>Shambles</span> was the band’s
+          canvas for defining their sound and setting the stage for their
+          evolution. With the explosive drumming of Mark Bitar, the band put
+          their music into motion, propelling them from the Beirut music scene
+          to Montreal stages.
           <br />
           <br /> Alongside the change of scenery, Pēlikel 's sound transformed.
           The rhythmic contributions of drummer Anton Samoylenko, brought a new
@@ -71,7 +74,7 @@ const Text = styled.div`
 `;
 
 const Line = styled.img`
-  height: 20px;
+  height: 15px;
   background-color: whitesmoke;
 `;
 
