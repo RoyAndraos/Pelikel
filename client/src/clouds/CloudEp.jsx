@@ -1,4 +1,5 @@
-import { Cloud, CloudWrapper, StyledLink } from "./CloudWiki";
+import { CloudWrapper, StyledLink } from "./CloudWiki";
+import styled from "styled-components";
 const CloudEp = ({ cloudEpRef, visible }) => {
   return (
     <CloudWrapper ref={cloudEpRef}>
@@ -7,10 +8,19 @@ const CloudEp = ({ cloudEpRef, visible }) => {
         visible={visible}
         style={{ textDecoration: "none" }}
       >
-        <Cloud src="/clouds/cloudEp.svg" alt="" style={{ width: "15vw" }} />
+        <Cloud src="/clouds/cloudEp.svg" alt="" />
         [???]
       </StyledLink>
     </CloudWrapper>
   );
 };
+
+const Cloud = styled.img`
+  width: 15vw;
+  aspect-ratio: 1.5/1;
+  cursor: pointer;
+  @media (max-width: 798px) {
+    width: 60vw;
+  }
+`;
 export default CloudEp;

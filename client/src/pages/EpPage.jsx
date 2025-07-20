@@ -14,7 +14,10 @@ const EpPage = () => {
       </Header>
 
       <TitleWrap>
-        Nothing to see here. <br />I think I'll just lay for a while…
+        Nothing to see here, <br />
+        <span style={{ fontStyle: "italic" }}>
+          I think I'll just lay for a while…
+        </span>
       </TitleWrap>
     </div>
   );
@@ -22,7 +25,6 @@ const EpPage = () => {
 const TitleWrap = styled.div`
   text-align: center;
   font-size: 20px;
-  line-height: 5vh;
 `;
 
 export default EpPage;

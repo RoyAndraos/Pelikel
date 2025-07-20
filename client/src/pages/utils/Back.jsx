@@ -25,5 +25,9 @@ const BackButton = styled.button`
   top: 50%;
   transform: translateY(-50%);
   text-decoration: underline;
+
+  @media (max-width: 798px) {
+    display: none;
+  }
 `;
 export default Back;

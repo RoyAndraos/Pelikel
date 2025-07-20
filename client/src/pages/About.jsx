@@ -61,9 +61,15 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   padding: 10vh 5vw 0 5vw;
   gap: 5vw;
+  @media (max-width: 798px) {
+    flex-direction: column;
+  }
 `;
 const Image = styled.img`
   width: 25vw;
+  @media (max-width: 798px) {
+    width: 80vw;
+  }
 `;
 
 const Text = styled.div`
@@ -71,6 +77,10 @@ const Text = styled.div`
   max-width: 35vw;
   text-align: justify;
   line-height: 1.5rem;
+  @media (max-width: 798px) {
+    max-width: 80vw;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 `;
 
 const Line = styled.img`

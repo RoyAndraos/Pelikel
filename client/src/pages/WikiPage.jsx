@@ -39,19 +39,8 @@ const WikiPage = () => {
               </Reg>
             </div>
           </ImageInfoWrap>{" "}
-          <ImageInfoWrap
-            style={{
-              position: "relative",
-              left: "12vw",
-              width: "32vw",
-              marginBottom: "0",
-            }}
-          >
-            <StyledImage
-              style={{ width: "8vw" }}
-              src="/wiki/cumulusHumilis.svg"
-              alt=""
-            />
+          <ImageInfoWrapSmall>
+            <StyledImageSmall src="/wiki/cumulusHumilis.svg" alt="" />
             <div>
               <H2>cumulus Humilis</H2>
 
@@ -67,7 +56,7 @@ const WikiPage = () => {
                 alone in the middle of the big, big, big blue sky :(
               </Reg>
             </div>
-          </ImageInfoWrap>
+          </ImageInfoWrapSmall>
         </div>
         <ImageInfoWrap>
           <StyledImage src="/wiki/stratus.svg" alt="" />
@@ -180,6 +169,11 @@ export const Header = styled.div`
   flex-direction: row;
   padding: 2vh 0;
   height: 7vh;
+  @media (max-width: 798px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 10vh;
+  }
 `;
 export const TitleWrap = styled.div`
   display: flex;
@@ -196,10 +190,13 @@ const ContentWrap = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 99vw;
-  top: 12vh;
+  width: 98vw;
+  top: 20vh;
   gap: 7vh;
   position: relative;
+  @media (max-width: 798px) {
+    width: 100vw;
+  }
 `;
 const ImageInfoWrap = styled.div`
   display: flex;
@@ -213,9 +210,38 @@ const ImageInfoWrap = styled.div`
   &:first-of-type {
     margin-top: 5vh;
   }
+  @media (max-width: 798px) {
+    width: 90vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6vh;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 6vh;
+    &:first-of-type {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+`;
+const ImageInfoWrapSmall = styled.div`
+  position: relative;
+  width: 90vw;
+  margin-bottom: 0;
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 6vh;
 `;
 const StyledImage = styled.img`
   width: 10vw;
+  @media (max-width: 798px) {
+    width: 80vw;
+  }
+`;
+const StyledImageSmall = styled.img`
+  width: 8vw;
+  @media (max-width: 798px) {
+    width: 50vw;
+  }
 `;
 const BoldItal = styled.p`
   font-weight: 600;

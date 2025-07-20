@@ -14,8 +14,6 @@ const Contact = () => {
       </Header>
 
       <ContentWrapper>
-        <div>Reach out to Pēlikel!</div>
-        <br />
         <div style={{ display: "flex", flexDirection: "column" }}>
           For booking and inquiries:
           <a href="mailto:pelikelmusic@gmail.com" target="_blank">

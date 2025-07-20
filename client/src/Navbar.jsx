@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 const Navbar = ({ navbarRef, visible }) => {
-  {
-    /* <Button as="a" href="mailto:pelikelmusic@gmail.com">
-  pelikelmusic@gmail.com <MdContentCopy />
-</Button> */
-  }
-
   return (
     <Wrapper ref={navbarRef}>
       <StyledNavLink to={"/about"} visible={visible}>
@@ -31,6 +25,9 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   opacity: 0;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
@@ -41,13 +38,5 @@ const StyledNavLink = styled(NavLink)`
     text-decoration: underline;
   }
 `;
-const Button = styled.button`
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  width: fit-content;
-  display: flex;
-  gap: 0.5vw;
-`;
+
 export default Navbar;

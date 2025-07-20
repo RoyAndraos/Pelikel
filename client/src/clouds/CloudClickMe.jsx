@@ -5,6 +5,7 @@ import styled from "styled-components";
 const CloudClickMe = ({ played, setPlayed, setPlayedCount }) => {
   const [soundId, setSoundId] = useState(0);
   const [notes, setNotes] = useState([]);
+  const [counter, setCounter] = useState(9);
 
   useEffect(() => {
     const preloadedNotes = Array.from({ length: 10 }, (_, i) => ({
@@ -24,6 +25,14 @@ const CloudClickMe = ({ played, setPlayed, setPlayedCount }) => {
     if (notes.length === 0) return;
 
     const nextId = soundId >= 9 ? 1 : soundId + 1;
+    if (counter !== 1) {
+      setCounter((prev) => {
+        return prev - 1;
+      });
+    } else {
+      setCounter(9);
+    }
+
     setSoundId(nextId);
 
     const currentAudio = notes[nextId]?.note;
@@ -51,7 +60,21 @@ const CloudClickMe = ({ played, setPlayed, setPlayedCount }) => {
       }}
     >
       <Cloud src="/clouds/cloudClickMe.svg" alt="" />
-      <StyledLink>click me!</StyledLink>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "3px",
+          alignItems: "center",
+        }}
+      >
+        <StyledLink>click me! </StyledLink>
+        {!played && (
+          <span style={{ fontSize: "12px", textDecoration: "none !important" }}>
+            [{counter}]
+          </span>
+        )}
+      </div>
     </CloudWrapper>
   );
 };

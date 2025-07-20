@@ -13,7 +13,7 @@ const Shows = () => {
         </StyledNavlink>
       </Header>
       <ContentWrapper>
-        <a href="https://tally.so/r/mReMAv">
+        <a href="https://tally.so/r/mReMAv" target="_blank">
           <Image src="/july.jpg" alt="" />
         </a>
         <br />
@@ -33,6 +33,9 @@ const ContentWrapper = styled.p`
 `;
 const Image = styled.img`
   width: 15vw;
+  @media (max-width: 798px) {
+    width: 80vw;
+  }
 `;
 
 export default Shows;

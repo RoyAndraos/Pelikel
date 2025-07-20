@@ -19,5 +19,9 @@ export const StyledNavlink = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
+
+  @media (max-width: 798px) {
+    text-align: center;
+  }
 `;
 export default Logo;

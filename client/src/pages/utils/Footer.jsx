@@ -62,6 +62,10 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   opacity: 0;
+  @media (max-width: 798px) {
+    width: 100vw;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 `;
 const Link = styled.a`
   opacity: 0.7;

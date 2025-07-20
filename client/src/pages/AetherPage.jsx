@@ -43,7 +43,7 @@ const AetherPage = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div>
+    <Wrapper>
       <Header>
         <Back /> <div></div>
         <TitleWrap>
@@ -80,7 +80,7 @@ const AetherPage = () => {
           Will I ever learn about gravity?
         </span>
       </ContentWrapper>
-    </div>
+    </Wrapper>
   );
 };
 const ContentWrapper = styled.div`
@@ -91,10 +91,14 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   font-size: 23px;
+  @media (max-width: 798px) {
+    transform: scale(0.75);
+  }
 `;
 const Line = styled.div`
   height: 25px;
   margin-bottom: 5px;
   background-color: whitesmoke;
 `;
+const Wrapper = styled.div``;
 export default AetherPage;

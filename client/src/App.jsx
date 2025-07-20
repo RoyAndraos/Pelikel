@@ -3,7 +3,7 @@ import GlobalStyles from "./GlobalStyles";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import WikiPage from "./pages/WikiPage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AetherPage from "./pages/AetherPage";
 import EpPage from "./pages/EpPage";
 import Shows from "./pages/Shows";
@@ -14,6 +14,19 @@ import Footer from "./pages/utils/Footer";
 const App = () => {
   const [played, setPlayed] = useState(false);
   const [playedCount, setPlayedCount] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Example: mobile if width <= 768px
+    };
+
+    checkMobile(); // Run once on mount
+
+    window.addEventListener("resize", checkMobile); // Listen for window resize
+
+    return () => window.removeEventListener("resize", checkMobile); // Clean up listener
+  }, []);
   return (
     <Wrapper>
       <GlobalStyles />
@@ -26,6 +39,9 @@ const App = () => {
               setPlayed={setPlayed}
               setPlayedCount={setPlayedCount}
               playedCount={playedCount}
+              open={open}
+              setOpen={setOpen}
+              isMobile={isMobile}
             />
           }
         />

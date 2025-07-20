@@ -11,12 +11,23 @@ import Navbar from "../Navbar";
 import Logo from "./utils/Logo";
 gsap.registerPlugin(MotionPathPlugin);
 import Footer from "./utils/Footer";
-const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
+import HamburgerMenu from "./utils/HamburgerMenu";
+import MobileNav from "./utils/MobileNav";
+const Homepage = ({
+  played,
+  setPlayed,
+  playedCount,
+  setPlayedCount,
+  open,
+  setOpen,
+  isMobile,
+}) => {
   const cloudEp = useRef(null);
   const cloudAether = useRef(null);
   const cloudWiki = useRef(null);
   const titleRef = useRef(null);
   const navbarRef = useRef(null);
+  const burgerRef = useRef(null);
 
   useEffect(() => {
     if (!played) return;
@@ -47,6 +58,7 @@ const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
       gsap.to(cloudWiki.current, { opacity: 1, duration: 0.1 });
       gsap.to(titleRef.current, { opacity: 1, duration: 0.1 });
       gsap.to(navbarRef.current, { opacity: 1, duration: 0.1 });
+      gsap.to(burgerRef.current, { opacity: 1, duration: 0.1 });
     }
 
     // FADE IN cloudEp
@@ -89,6 +101,7 @@ const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
       duration: 3.5,
       delay: 0.8,
     });
+    gsap.to(burgerRef.current, { opacity: 1, duration: 3.5, delay: 0.8 });
 
     gsap.to(navbarRef.current, {
       opacity: 1,
@@ -99,6 +112,9 @@ const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
   return (
     <Container>
       <Header>
+        {isMobile && (
+          <HamburgerMenu burgerRef={burgerRef} setOpen={setOpen} open={open} />
+        )}
         <Logo titleRef={titleRef} visible={played} />
       </Header>
       <Navbar navbarRef={navbarRef} visible={played} />
@@ -115,6 +131,7 @@ const Homepage = ({ played, setPlayed, playedCount, setPlayedCount }) => {
         />
         <CloudAether cloudAether={cloudAether} visible={played} />
       </Wrapper>
+      {open && <MobileNav />}
       <Footer played={played} playedCount={playedCount} />
     </Container>
   );
@@ -126,6 +143,14 @@ const Container = styled.div`
   height: 70vh;
   gap: 5vh;
   align-items: center;
+  @media (max-width: 798px) {
+    padding-top: env(safe-area-inset-top);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80vh;
+    gap: 0;
+  }
 `;
 
 const Wrapper = styled.div`
