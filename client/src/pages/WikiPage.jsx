@@ -42,7 +42,7 @@ const WikiPage = () => {
           <ImageInfoWrapSmall>
             <StyledImageSmall src="/wiki/cumulusHumilis.svg" alt="" />
             <div>
-              <H2>cumulus Humilis</H2>
+              <H2 style={{ fontStyle: "italic" }}>cumulus humilis</H2>
 
               <Reg>/ˈkjuːmjʊləs ˈhjuːmɪlɪs/</Reg>
               <Reg>KYOO-myuh-luhs HYOO-mih-liss</Reg>
@@ -212,12 +212,14 @@ const ImageInfoWrap = styled.div`
   }
   @media (max-width: 798px) {
     width: 90vw;
+    border-bottom: 1px solid whitesmoke;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 6vh;
-    border-bottom: 1px solid whitesmoke;
     padding-bottom: 6vh;
+
     &:first-of-type {
       padding-bottom: 0;
       border-bottom: none;
@@ -226,10 +228,15 @@ const ImageInfoWrap = styled.div`
 `;
 const ImageInfoWrapSmall = styled.div`
   position: relative;
-  width: 90vw;
+  width: 44vw;
   margin-bottom: 0;
-  border-bottom: 1px solid whitesmoke;
   padding-bottom: 6vh;
+  left: 11vw;
+  @media (max-width: 798px) {
+    width: 90vw;
+    left: 0;
+    border-bottom: 1px solid whitesmoke;
+  }
 `;
 const StyledImage = styled.img`
   width: 10vw;

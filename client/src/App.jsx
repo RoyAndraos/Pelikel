@@ -65,6 +65,8 @@ const Wrapper = styled.div`
   gap: 3vw;
   @media (max-width: 798px) {
     flex-direction: column;
+    justify-content: flex-start;
+
     gap: 0;
   }
 `;

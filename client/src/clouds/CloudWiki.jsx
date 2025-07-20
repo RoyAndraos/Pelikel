@@ -17,7 +17,7 @@ export const Cloud = styled.img`
   aspect-ratio: 1.5/1;
   cursor: pointer;
   @media (max-width: 798px) {
-    width: 45vw;
+    width: 40vw;
   }
 `;
 

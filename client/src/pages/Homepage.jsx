@@ -117,8 +117,8 @@ const Homepage = ({
         )}
         <Logo titleRef={titleRef} visible={played} />
       </Header>
-      <Navbar navbarRef={navbarRef} visible={played} />
-      <div>
+      {!isMobile && <Navbar navbarRef={navbarRef} visible={played} />}
+      <div style={{ position: "relative", top: "10vh" }}>
         {" "}
         <CloudEp cloudEpRef={cloudEp} visible={played} />
       </div>
@@ -148,18 +148,19 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 80vh;
+    height: 65vh;
     gap: 0;
   }
 `;
 
 const Wrapper = styled.div`
-  /* background-image: url("/background.svg"); */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3vw;
+  position: relative;
+  top: 12vh;
   @media (max-width: 798px) {
     flex-direction: column;
     gap: 0;
