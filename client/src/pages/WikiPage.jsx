@@ -43,9 +43,10 @@ const WikiPage = () => {
             <StyledImageSmall src="/wiki/cumulusHumilis.svg" alt="" />
             <div>
               <H2 style={{ fontStyle: "italic" }}>cumulus humilis</H2>
-              <Definition>Humilis = "small" or "humble"</Definition>
               <Reg>/ˈkjuːmjʊləs ˈhjuːmɪlɪs/</Reg>
               <Reg>KYOO-myuh-luhs HYOO-mih-liss</Reg>
+              <Definition>Humilis = "small" or "humble"</Definition>
+
               <Reg style={{ marginTop: "15px" }}>
                 In the <span style={{ fontStyle: "italic" }}>cumulus</span>{" "}
                 family, you may find the baby brother,{" "}
