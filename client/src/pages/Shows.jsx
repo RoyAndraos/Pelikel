@@ -18,7 +18,7 @@ const Shows = () => {
           <p style={{ textDecoration: "underline" }}>TBA</p>
         </Top>
         <Bottom>
-          <p style={{ fontStyle: "italic" }}>Previously:</p>
+          <p style={{ fontStyle: "italic" }}>Previously,</p>
           <br />
           <p>July 20, 2025 @ Turbo Haüs</p>
           <p>May 4, 2025 @ Brasserie Beaubien</p>
