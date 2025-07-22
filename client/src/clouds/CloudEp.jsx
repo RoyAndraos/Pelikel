@@ -20,7 +20,8 @@ const Cloud = styled.img`
   aspect-ratio: 1.5/1;
   cursor: pointer;
   @media (max-width: 798px) {
-    width: 50vw;
+    width: auto;
+    height: 15vh;
   }
 `;
 export default CloudEp;

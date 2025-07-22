@@ -63,6 +63,7 @@ const ContentWrapper = styled.div`
   gap: 5vw;
   @media (max-width: 798px) {
     flex-direction: column;
+    padding: 15vh 0;
   }
 `;
 const Image = styled.img`

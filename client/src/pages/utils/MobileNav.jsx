@@ -1,11 +1,31 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-const MobileNav = () => {
+import { useNavigate } from "react-router-dom";
+const MobileNav = ({ setOpen, open }) => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
-      <StyledNavLink to={"/about"}>ABOUT</StyledNavLink>
-      <StyledNavLink to={"/shows"}>SHOWS</StyledNavLink>
-      <StyledNavLink to={"/contact"}>
+      <StyledNavLink
+        onClick={() => {
+          setOpen(!open);
+          navigate("/about");
+        }}
+      >
+        ABOUT
+      </StyledNavLink>
+      <StyledNavLink
+        onClick={() => {
+          setOpen(!open);
+          navigate("/shows");
+        }}
+      >
+        SHOWS
+      </StyledNavLink>
+      <StyledNavLink
+        onClick={() => {
+          setOpen(!open);
+          navigate("/contact");
+        }}
+      >
         <span>CONTACT</span>
       </StyledNavLink>
     </Wrapper>
@@ -25,15 +45,14 @@ const Wrapper = styled.div`
   background-image: url("/background.svg");
   z-index: 1000;
 `;
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled.button`
   text-decoration: none;
   font-family: sans-serif;
   font-size: 20px;
   top: -100px;
   position: relative;
-  &:hover {
-    text-decoration: underline;
-  }
+  background-color: transparent;
+  border: none;
 `;
 
 export default MobileNav;

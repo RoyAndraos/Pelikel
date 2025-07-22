@@ -43,7 +43,7 @@ const WikiPage = () => {
             <StyledImageSmall src="/wiki/cumulusHumilis.svg" alt="" />
             <div>
               <H2 style={{ fontStyle: "italic" }}>cumulus humilis</H2>
-
+              <Definition>Humilis = "small" or "humble"</Definition>
               <Reg>/ˈkjuːmjʊləs ˈhjuːmɪlɪs/</Reg>
               <Reg>KYOO-myuh-luhs HYOO-mih-liss</Reg>
               <Reg style={{ marginTop: "15px" }}>

@@ -91,8 +91,11 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   font-size: 23px;
+
   @media (max-width: 798px) {
     transform: scale(0.75);
+    top: 15vh;
+    position: relative;
   }
 `;
 const Line = styled.div`

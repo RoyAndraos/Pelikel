@@ -131,7 +131,7 @@ const Homepage = ({
         />
         <CloudAether cloudAether={cloudAether} visible={played} />
       </Wrapper>
-      {open && <MobileNav />}
+      {open && <MobileNav open={open} setOpen={setOpen} />}
       <Footer played={played} playedCount={playedCount} />
     </Container>
   );

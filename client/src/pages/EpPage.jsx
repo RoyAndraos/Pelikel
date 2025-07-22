@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const EpPage = () => {
   return (
-    <div>
+    <Wrapper>
       <Header>
         <Back />
         <StyledNavlink to="/" visible={true}>
@@ -19,12 +19,22 @@ const EpPage = () => {
           I think I'll just lay for a while…
         </span>
       </TitleWrap>
-    </div>
+    </Wrapper>
   );
 };
 const TitleWrap = styled.div`
   text-align: center;
   font-size: 20px;
+`;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  @media (max-width: 798px) {
+    height: 100vh;
+  }
 `;
 
 export default EpPage;

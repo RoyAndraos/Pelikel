@@ -30,6 +30,13 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   font-size: 20px;
+  @media (max-width: 798px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
 `;
 
 export default Contact;
