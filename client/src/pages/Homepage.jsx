@@ -179,7 +179,7 @@ const Container = styled.div`
 const Link = styled.a`
   font-size: 20px;
   position: relative;
-  top: 10vh;
+  top: 8vh;
   text-align: center;
   text-decoration: none;
   font-family: sans-serif;
@@ -188,6 +188,9 @@ const Link = styled.a`
   letter-spacing: 0.1rem;
   &:hover {
     text-decoration: underline;
+  }
+  @media (max-width: 798px) {
+    font-size: 14px;
   }
 `;
 
@@ -204,8 +207,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    top: 0;
     gap: 0;
+    top: unset;
+    bottom: 5vh;
   }
 `;
 
