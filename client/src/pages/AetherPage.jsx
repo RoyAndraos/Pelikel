@@ -43,7 +43,7 @@ const AetherPage = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <Wrapper>
+    <div>
       <Header>
         <Back /> <div></div>
         <TitleWrap>
@@ -57,6 +57,11 @@ const AetherPage = () => {
         </StyledNavlink>
       </Header>
       <ContentWrapper>
+        <StyledLink href="https://show.co/s2RjWiG" target="_blank">
+          <span>
+            PRE-SAVE <br /> AETHER VOYAGE
+          </span>
+        </StyledLink>
         <Line key={"1"} style={{ width: "350px" }}></Line>
         <Line key={"2"} style={{ width: "330px" }}></Line>
         <Line key={"3"} style={{ width: "450px" }}></Line>
@@ -80,7 +85,7 @@ const AetherPage = () => {
           Will I ever learn about gravity?
         </span>
       </ContentWrapper>
-    </Wrapper>
+    </div>
   );
 };
 const ContentWrapper = styled.div`
@@ -91,6 +96,7 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   font-size: 23px;
+  width: 450px;
 
   @media (max-width: 798px) {
     transform: scale(0.75);
@@ -103,5 +109,13 @@ const Line = styled.div`
   margin-bottom: 5px;
   background-color: whitesmoke;
 `;
-const Wrapper = styled.div``;
+const StyledLink = styled.a`
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 2vh;
+  text-align: center;
+  place-self: center;
+`;
 export default AetherPage;

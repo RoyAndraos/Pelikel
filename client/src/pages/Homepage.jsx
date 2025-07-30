@@ -28,7 +28,7 @@ const Homepage = ({
   const titleRef = useRef(null);
   const navbarRef = useRef(null);
   const burgerRef = useRef(null);
-
+  const presaveRef = useRef(null);
   useEffect(() => {
     if (!played) return;
     if (playedCount === 1) {
@@ -37,7 +37,7 @@ const Homepage = ({
         cloudEp.current,
         {
           motionPath: {
-            path: "M20,0 A20,20 0 1,1 -20,0 A20,20 0 1,1 20,0",
+            path: "M10,0 A10,10 0 1,1 -10,0 A10,10 0 1,1 10,0",
             alignOrigin: [0.5, 0.5],
           },
           duration: 8,
@@ -59,6 +59,7 @@ const Homepage = ({
       gsap.to(titleRef.current, { opacity: 1, duration: 0.1 });
       gsap.to(navbarRef.current, { opacity: 1, duration: 0.1 });
       gsap.to(burgerRef.current, { opacity: 1, duration: 0.1 });
+      gsap.to(presaveRef.current, { opacity: 1, duration: 0.1 });
     }
 
     // FADE IN cloudEp
@@ -80,7 +81,7 @@ const Homepage = ({
       cloudEp.current,
       {
         motionPath: {
-          path: "M20,0 A20,20 0 1,1 -20,0 A20,20 0 1,1 20,0",
+          path: "M10,0 A10,10 0 1,1 -10,0 A10,10 0 1,1 10,0",
           alignOrigin: [0.5, 0.5],
         },
         duration: 8,
@@ -102,7 +103,11 @@ const Homepage = ({
       delay: 0.8,
     });
     gsap.to(burgerRef.current, { opacity: 1, duration: 3.5, delay: 0.8 });
-
+    gsap.to(presaveRef.current, {
+      opacity: 1,
+      duration: 3.5,
+      delay: 0.8,
+    });
     gsap.to(navbarRef.current, {
       opacity: 1,
       duration: 3.5,
@@ -117,30 +122,48 @@ const Homepage = ({
         )}
         <Logo titleRef={titleRef} visible={played} />
       </Header>
+
+      <Link href="https://show.co/s2RjWiG" target="_blank" ref={presaveRef}>
+        PRE-SAVE 'AETHER VOYAGE'
+        <br />
+        OUT AUGUST 8
+      </Link>
+
       {!isMobile && <Navbar navbarRef={navbarRef} visible={played} />}
       <div style={{ position: "relative", top: "10vh" }}>
         {" "}
         <CloudEp cloudEpRef={cloudEp} visible={played} />
       </div>
-      <Wrapper>
-        <CloudWiki cloudWiki={cloudWiki} visible={played} />
+      {isMobile && (
         <CloudClickMe
           played={played}
           setPlayed={setPlayed}
           setPlayedCount={setPlayedCount}
         />
+      )}
+      <Wrapper>
+        <CloudWiki cloudWiki={cloudWiki} visible={played} />
+        {!isMobile && (
+          <CloudClickMe
+            played={played}
+            setPlayed={setPlayed}
+            setPlayedCount={setPlayedCount}
+          />
+        )}
         <CloudAether cloudAether={cloudAether} visible={played} />
       </Wrapper>
+
       {open && <MobileNav open={open} setOpen={setOpen} />}
+
       <Footer played={played} playedCount={playedCount} />
     </Container>
   );
 };
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 30vh 20vh;
+  grid-template-rows: 10vh 10vh 20vh 20vh;
   place-content: top;
-  height: 70vh;
+  height: 80vh;
   gap: 5vh;
   align-items: center;
   @media (max-width: 798px) {
@@ -148,8 +171,23 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 65vh;
+    height: 90vh;
+    width: 100%;
     gap: 0;
+  }
+`;
+const Link = styled.a`
+  font-size: 20px;
+  position: relative;
+  top: 10vh;
+  text-align: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  opacity: 0;
+  line-height: 3vh;
+  letter-spacing: 0.1rem;
+  &:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -161,8 +199,12 @@ const Wrapper = styled.div`
   gap: 3vw;
   position: relative;
   top: 12vh;
+
   @media (max-width: 798px) {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 0;
     gap: 0;
   }
 `;

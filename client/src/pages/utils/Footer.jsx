@@ -4,7 +4,9 @@ import { FaSpotify } from "react-icons/fa6";
 import { SiApplemusic } from "react-icons/si";
 import { PiYoutubeLogoFill } from "react-icons/pi";
 import { useEffect, useRef } from "react";
+import { AiFillTikTok } from "react-icons/ai";
 import gsap from "gsap";
+
 const Footer = ({ played, playedCount }) => {
   const iconsRef = useRef(null);
   useEffect(() => {
@@ -12,7 +14,6 @@ const Footer = ({ played, playedCount }) => {
     if (playedCount === 1) {
       gsap.to(iconsRef.current, { opacity: 1, duration: 0.1 });
     }
-
     gsap.to(iconsRef.current, {
       opacity: 1,
       duration: 3.5,
@@ -26,6 +27,12 @@ const Footer = ({ played, playedCount }) => {
         href="https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx"
       >
         <RiInstagramFill style={{ fontSize: "35px" }} />
+      </Link>
+      <Link
+        target="_blank"
+        href="https://www.tiktok.com/@pelikelmusic?_t=ZS-8ySlXaoS5xZ&_r=1"
+      >
+        <AiFillTikTok style={{ fontSize: "35px" }} />
       </Link>
       <Link
         target="_blank"
@@ -52,7 +59,7 @@ const Footer = ({ played, playedCount }) => {
   );
 };
 const Wrapper = styled.div`
-  width: 20vw;
+  width: 30vw;
   height: 5vh;
   position: fixed;
   bottom: 3vh;
@@ -67,6 +74,7 @@ const Wrapper = styled.div`
     padding-bottom: env(safe-area-inset-bottom);
   }
 `;
+
 const Link = styled.a`
   opacity: 0.7;
   transition: 0.2s ease-in-out;
@@ -74,6 +82,7 @@ const Link = styled.a`
     opacity: 1;
   }
 `;
+
 const Anghami = styled.img`
   width: 25px;
   height: 25px;
@@ -81,13 +90,5 @@ const Anghami = styled.img`
   border-radius: 5px;
   padding: 2px;
 `;
-
-// IG icon
-// https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx
-// SPOTIFY icon
-// https://open.spotify.com/artist/4tiXJDgDwvcHMv77aA9Bb2?si=KcGSUKQuQzuC4WajpX4LrA
-// APPLE MUSIC icon https://music.apple.com/ca/artist/pēlikel/1579987164
-// YOUTUBE icon https://youtube.com/@pelikelmusic?si=MeBUNEMJSoG4PBWN
-// ANGHAMI ICON https://open.anghami.com/02kkBtz74Ub
 
 export default Footer;
