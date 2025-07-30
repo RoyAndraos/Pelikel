@@ -71,7 +71,8 @@ const Wrapper = styled.div`
   opacity: 0;
   @media (max-width: 798px) {
     width: 100vw;
-    padding-bottom: env(safe-area-inset-bottom);
+    position: relative;
+    bottom: 0;
   }
 `;
 

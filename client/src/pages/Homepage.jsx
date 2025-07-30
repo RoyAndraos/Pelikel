@@ -171,7 +171,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     gap: 0;
   }
