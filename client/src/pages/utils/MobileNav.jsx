@@ -5,7 +5,7 @@ const MobileNav = ({ setOpen, open }) => {
   return (
     <Wrapper>
       <div>
-        <StyledLink href="https://show.co/s2RjWiG" target="_blank">
+        <StyledLink href="https://show.co/6vD9IWb" target="_blank">
           <span>PRE-SAVE AETHER VOYAGE</span>
         </StyledLink>
       </div>
