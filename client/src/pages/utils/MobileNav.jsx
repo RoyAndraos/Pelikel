@@ -5,8 +5,8 @@ const MobileNav = ({ setOpen, open }) => {
   return (
     <Wrapper>
       <div>
-        <StyledLink href="https://show.co/6vD9IWb" target="_blank">
-          <span>PRE-SAVE AETHER VOYAGE</span>
+        <StyledLink href="https://linktr.ee/pelikelmusic" target="_blank">
+          <span style={{ fontStyle: "italic" }}>AETHER VOYAGE</span>
         </StyledLink>
       </div>
       <StyledNavLink
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   top: 10vh;
   left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

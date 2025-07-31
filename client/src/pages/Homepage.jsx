@@ -123,10 +123,12 @@ const Homepage = ({
         <Logo titleRef={titleRef} visible={played} />
       </Header>
 
-      <Link href="https://show.co/6vD9IWb" target="_blank" ref={presaveRef}>
-        PRE-SAVE 'AETHER VOYAGE'
-        <br />
-        OUT AUGUST 8
+      <Link
+        href="https://linktr.ee/pelikelmusic"
+        target="_blank"
+        ref={presaveRef}
+      >
+        LISTEN TO 'AETHER VOYAGE'
       </Link>
 
       {!isMobile && <Navbar navbarRef={navbarRef} visible={played} />}
