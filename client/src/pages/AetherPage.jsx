@@ -57,7 +57,7 @@ const AetherPage = () => {
         </StyledNavlink>
       </Header>
       <ContentWrapper>
-        <StyledLink href="https://show.co/6vD9IWb" target="_blank">
+        <StyledLink href="https://ffm.to/od9jvea" target="_blank">
           <span>
             PRE-SAVE <br /> AETHER VOYAGE
           </span>

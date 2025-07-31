@@ -123,7 +123,7 @@ const Homepage = ({
         <Logo titleRef={titleRef} visible={played} />
       </Header>
 
-      <Link href="https://show.co/6vD9IWb" target="_blank" ref={presaveRef}>
+      <Link href="https://ffm.to/od9jvea" target="_blank" ref={presaveRef}>
         PRE-SAVE 'AETHER VOYAGE'
         <br />
         OUT AUGUST 8
