@@ -46,6 +46,33 @@ const AetherPage = () => {
         </StyledLink>
       )}
       <ContentWrapper>
+        <StyledLink href="https://ffm.to/od9jvea" target="_blank">
+          <span>
+            PRE-SAVE <br /> AETHER VOYAGE
+          </span>
+        </StyledLink>
+        <Line key={"1"} style={{ width: "350px" }}></Line>
+        <Line key={"2"} style={{ width: "330px" }}></Line>
+        <Line key={"3"} style={{ width: "450px" }}></Line>
+        <Line key={"4"} style={{ width: "315px" }}></Line>
+        <br />
+        <Line key={"5"} style={{ width: "240px" }}></Line>
+        <Line key={"6"} style={{ width: "315px" }}></Line>
+        <Line key={"7"} style={{ width: "220px" }}></Line>
+        <Line key={"8"} style={{ width: "245px" }}></Line>
+        <br />
+        <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+          <Line key={"9"} style={{ width: "150px" }}></Line>
+          <span ref={text1Ref} style={{ opacity: 0 }}>
+            aether,
+          </span>
+          <Line key={"11"} style={{ width: "100px" }}></Line>
+        </div>
+        <Line key={"12"} style={{ width: "325px" }}></Line>
+        <Line key={"13"} style={{ width: "245px" }}></Line>
+        <span ref={text2Ref} style={{ opacity: 0 }}>
+          Will I ever learn about gravity?
+        </span>
         <TextWrapper ref={text1Ref}>
           Nowhere to run to, the lawn's freshly mowed
           <br />
