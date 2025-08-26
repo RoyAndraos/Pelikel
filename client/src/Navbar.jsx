@@ -1,15 +1,11 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-const Navbar = ({ navbarRef, visible }) => {
+const Navbar = ({ navbarRef }) => {
   return (
     <Wrapper ref={navbarRef}>
-      <StyledNavLink to={"/about"} visible={visible}>
-        ABOUT
-      </StyledNavLink>
-      <StyledNavLink to={"/shows"} visible={visible}>
-        SHOWS
-      </StyledNavLink>
-      <StyledNavLink to={"/contact"} visible={visible}>
+      <StyledNavLink to={"/about"}>ABOUT</StyledNavLink>
+      <StyledNavLink to={"/shows"}>SHOWS</StyledNavLink>
+      <StyledNavLink to={"/contact"}>
         <span>CONTACT</span>
       </StyledNavLink>
     </Wrapper>
@@ -33,7 +29,6 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-family: sans-serif;
   font-size: 20px;
-  pointer-events: ${(props) => (props.visible ? "auto" : "none")};
   &:hover {
     text-decoration: underline;
   }

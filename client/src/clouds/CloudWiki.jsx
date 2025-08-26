@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const CloudWiki = ({ cloudWiki, visible }) => {
+const CloudWiki = ({ cloudWiki }) => {
   return (
     <CloudWrapper ref={cloudWiki}>
-      <StyledLink to="/cloudWiki" visible={visible}>
+      <StyledLink to="/cloudWiki">
         <Cloud src="/clouds/cloudWiki.svg" alt="" />
         cloud wiki
       </StyledLink>
@@ -29,7 +29,6 @@ export const StyledLink = styled(NavLink)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  pointer-events: ${(props) => (props.visible ? "auto" : "none")};
 `;
 
 export const CloudWrapper = styled.div`

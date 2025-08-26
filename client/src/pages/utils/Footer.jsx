@@ -7,19 +7,16 @@ import { useEffect, useRef } from "react";
 import { AiFillTikTok } from "react-icons/ai";
 import gsap from "gsap";
 
-const Footer = ({ played, playedCount }) => {
+const Footer = ({}) => {
   const iconsRef = useRef(null);
   useEffect(() => {
-    if (!played) return;
-    if (playedCount === 1) {
-      gsap.to(iconsRef.current, { opacity: 1, duration: 0.1 });
-    }
+    gsap.to(iconsRef.current, { opacity: 1, duration: 0.1 });
     gsap.to(iconsRef.current, {
       opacity: 1,
       duration: 3.5,
       delay: 1.2,
     });
-  }, [played]);
+  }, []);
   return (
     <Wrapper ref={iconsRef}>
       <Link

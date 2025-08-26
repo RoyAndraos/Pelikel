@@ -36,7 +36,7 @@ const AetherPage = () => {
         <TitleWrap>
           <h1 style={{ textDecoration: "underline" }}>aether voyage</h1>
         </TitleWrap>
-        <StyledNavlink to="/" visible={true}>
+        <StyledNavlink to="/">
           <Title style={{ opacity: 1 }}>pēlikel</Title>
         </StyledNavlink>
       </Header>

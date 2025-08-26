@@ -1,15 +1,11 @@
 import { CloudWrapper, StyledLink } from "./CloudWiki";
 import styled from "styled-components";
-const CloudEp = ({ cloudEpRef, visible }) => {
+const CloudEp = ({ cloudEpRef }) => {
   return (
     <CloudWrapper ref={cloudEpRef}>
-      <StyledLink
-        to="/cloud???"
-        visible={visible}
-        style={{ textDecoration: "none" }}
-      >
-        [???]
+      <StyledLink to="/cloud???" style={{ textDecoration: "none" }}>
         <Cloud src="/clouds/cloudEp.svg" alt="" />
+        [???]
       </StyledLink>
     </CloudWrapper>
   );

@@ -1,9 +1,9 @@
 import { CloudWrapper, Cloud, StyledLink } from "./CloudWiki";
 
-const CloudAether = ({ cloudAether, visible }) => {
+const CloudAether = ({ cloudAether }) => {
   return (
     <CloudWrapper ref={cloudAether}>
-      <StyledLink to="/cloudAether" visible={visible}>
+      <StyledLink to="/cloudAether">
         <Cloud src="/clouds/cloudAether.svg" alt="" />
         aether voyage
       </StyledLink>

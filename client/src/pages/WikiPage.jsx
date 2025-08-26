@@ -12,7 +12,7 @@ const WikiPage = () => {
           <h1>cloud wiki</h1>
           <SubTitle>a cloud-watcher's guide</SubTitle>
         </TitleWrap>
-        <StyledNavlink to="/" visible={true}>
+        <StyledNavlink to="/">
           <Title style={{ opacity: 1 }}>pēlikel</Title>
         </StyledNavlink>
       </Header>

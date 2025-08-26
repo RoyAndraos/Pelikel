@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-const Logo = ({ titleRef, visible }) => {
+const Logo = ({ titleRef }) => {
   return (
-    <StyledNavlink to="/" visible={visible}>
+    <StyledNavlink to="/">
       <Title ref={titleRef} style={{ fontSize: "45px" }}>
         pēlikel
       </Title>
@@ -18,7 +18,6 @@ export const Title = styled.h1`
 export const StyledNavlink = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
-  pointer-events: ${(props) => (props.visible ? "auto" : "none")};
 
   @media (max-width: 798px) {
     text-align: center;

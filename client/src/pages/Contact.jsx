@@ -8,7 +8,7 @@ const Contact = () => {
     <div>
       <Header>
         <Back />
-        <StyledNavlink to="/" visible={true}>
+        <StyledNavlink to="/">
           <Title style={{ opacity: 1 }}>pēlikel</Title>
         </StyledNavlink>
       </Header>

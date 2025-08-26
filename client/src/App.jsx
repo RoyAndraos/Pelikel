@@ -9,13 +9,13 @@ import EpPage from "./pages/EpPage";
 import Shows from "./pages/Shows";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Footer from "./pages/utils/Footer";
 
 const App = () => {
-  const [played, setPlayed] = useState(false);
-  const [playedCount, setPlayedCount] = useState(0);
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [closedYoutube, setClosedYoutube] = useState(false);
+  const [showYoutube, setShowYoutube] = useState(true);
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768); // Example: mobile if width <= 768px
@@ -35,13 +35,13 @@ const App = () => {
           path="/"
           element={
             <Homepage
-              played={played}
-              setPlayed={setPlayed}
-              setPlayedCount={setPlayedCount}
-              playedCount={playedCount}
               open={open}
               setOpen={setOpen}
               isMobile={isMobile}
+              closedYoutube={closedYoutube}
+              setClosedYoutube={setClosedYoutube}
+              showYoutube={showYoutube}
+              setShowYoutube={setShowYoutube}
             />
           }
         />
@@ -66,7 +66,6 @@ const Wrapper = styled.div`
   @media (max-width: 798px) {
     flex-direction: column;
     justify-content: flex-start;
-
     gap: 0;
   }
 `;
