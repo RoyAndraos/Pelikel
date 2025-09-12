@@ -2,10 +2,7 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import WikiPage from "./pages/WikiPage";
 import { useEffect, useState } from "react";
-import AetherPage from "./pages/AetherPage";
-import EpPage from "./pages/EpPage";
 import Shows from "./pages/Shows";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -46,9 +43,6 @@ const App = () => {
             />
           }
         />
-        <Route path="/cloudWiki" element={<WikiPage />} />
-        <Route path="/cloudAether" element={<AetherPage />} />
-        <Route path="/cloud???" element={<EpPage />} />
         <Route path="/shows" element={<Shows />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
