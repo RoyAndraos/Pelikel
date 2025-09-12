@@ -9,7 +9,8 @@ import EpPage from "./pages/EpPage";
 import Shows from "./pages/Shows";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-
+import Music from "./pages/Music";
+import Videos from "./pages/Videos";
 const App = () => {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -51,9 +52,11 @@ const App = () => {
         <Route path="/shows" element={<Shows />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/music" element={<Music />} />
+        <Route path="/videos" element={<Videos />} />
       </Routes>
 
-      <Background src="/background.svg" alt="" />
+      <Background src="/bg.webp" alt="" />
     </Wrapper>
   );
 };

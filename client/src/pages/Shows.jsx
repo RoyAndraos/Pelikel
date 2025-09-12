@@ -1,17 +1,13 @@
-import { Header } from "./WikiPage";
-import Back from "./utils/Back";
-import { StyledNavlink, Title } from "./utils/Logo";
+import Navbar from "../Navbar";
+import Header from "./Header";
+import Footer from "./utils/Footer";
 import styled from "styled-components";
 
 const Shows = () => {
   return (
     <Wrapper>
-      <Header>
-        <Back />
-        <StyledNavlink to="/">
-          <Title style={{ opacity: 1 }}>pēlikel</Title>
-        </StyledNavlink>
-      </Header>
+      <Header />
+      <Navbar />
       <ContentWrapper>
         <Top>
           <p style={{ fontStyle: "italic" }}>Next show:</p>
@@ -20,11 +16,13 @@ const Shows = () => {
         <Bottom>
           <p style={{ fontStyle: "italic" }}>Previously,</p>
           <br />
+          <p>September 2, 2025 @ Turbo Haüs</p>
           <p>July 20, 2025 @ Turbo Haüs</p>
           <p>May 4, 2025 @ Brasserie Beaubien</p>
           <p>March 16, 2025 @ Bar Courcelle</p>
         </Bottom>
       </ContentWrapper>
+      <Footer />
     </Wrapper>
   );
 };
@@ -39,13 +37,17 @@ const Wrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   line-height: 3vh;
-  font-size: 20px;
+  font-size: 25px;
   height: 80vh;
   letter-spacing: 0.1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 798px) {
+    font-size: 18px;
+    padding: 0 5vw;
+  }
 `;
 const Top = styled.div`
   display: flex;
@@ -61,7 +63,10 @@ const Bottom = styled.div`
 
   p {
     margin: 0;
-    font-size: 14px;
+    font-size: 25px;
+    @media (max-width: 798px) {
+      font-size: 18px;
+    }
   }
   p:first-of-type {
     font-weight: bold;
@@ -70,7 +75,7 @@ const Bottom = styled.div`
     margin-bottom: 2vh;
   }
   @media (max-width: 798px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 

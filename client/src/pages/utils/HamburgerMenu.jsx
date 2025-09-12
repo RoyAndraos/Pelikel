@@ -15,7 +15,6 @@ const HamburgerMenu = ({ burgerRef, setOpen, open }) => {
   );
 };
 const Wrapper = styled.div`
-  opacity: 0;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
 const LineTop = styled.div`
   height: 3px;
   width: 40px;
-  background-color: whitesmoke;
+  background-color: black;
   transform: ${(props) => (props.$open ? "rotate(-45deg)" : "")};
   position: relative;
   top: ${(props) => (props.$open ? "9.5px" : "unset")};
@@ -33,14 +32,14 @@ const LineTop = styled.div`
 const LineMid = styled.div`
   height: 3px;
   width: 40px;
-  background-color: whitesmoke;
+  background-color: black;
   transition: 0.3s ease-in-out;
   opacity: ${(props) => (props.$open ? "0" : "1")};
 `;
 const LineBot = styled.div`
   height: 3px;
   width: 40px;
-  background-color: whitesmoke;
+  background-color: black;
   transition: 0.3s ease-in-out;
   transform: ${(props) => (props.$open ? "rotate(45deg)" : "")};
   top: ${(props) => (props.$open ? "-9.5px" : "unset")};

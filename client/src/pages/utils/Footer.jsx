@@ -18,58 +18,79 @@ const Footer = ({}) => {
     });
   }, []);
   return (
-    <Wrapper ref={iconsRef}>
-      <Link
-        target="_blank"
-        href="https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx"
-      >
-        <RiInstagramFill style={{ fontSize: "35px" }} />
-      </Link>
-      <Link
-        target="_blank"
-        href="https://www.tiktok.com/@pelikelmusic?_t=ZS-8ySlXaoS5xZ&_r=1"
-      >
-        <AiFillTikTok style={{ fontSize: "35px" }} />
-      </Link>
-      <Link
-        target="_blank"
-        href="https://open.spotify.com/artist/4tiXJDgDwvcHMv77aA9Bb2?si=KcGSUKQuQzuC4WajpX4LrA"
-      >
-        <FaSpotify style={{ fontSize: "33px" }} />
-      </Link>
-      <Link
-        target="_blank"
-        href="https://music.apple.com/ca/artist/pēlikel/1579987164"
-      >
-        <SiApplemusic style={{ fontSize: "30px" }} />
-      </Link>
-      <Link
-        target="_blank"
-        href="https://youtube.com/@pelikelmusic?si=MeBUNEMJSoG4PBWN"
-      >
-        <PiYoutubeLogoFill style={{ fontSize: "42px" }} />
-      </Link>
-      <Link target="_blank" href="https://open.anghami.com/02kkBtz74Ub">
-        <Anghami src="/anghami.svg" />
-      </Link>
-    </Wrapper>
+    <Container>
+      <Wrapper ref={iconsRef}>
+        <Link
+          target="_blank"
+          href="https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx"
+        >
+          <RiInstagramFill style={{ fontSize: "35px" }} />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://www.tiktok.com/@pelikelmusic?_t=ZS-8ySlXaoS5xZ&_r=1"
+        >
+          <AiFillTikTok style={{ fontSize: "35px" }} />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://open.spotify.com/artist/4tiXJDgDwvcHMv77aA9Bb2?si=KcGSUKQuQzuC4WajpX4LrA"
+        >
+          <FaSpotify style={{ fontSize: "33px" }} />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://music.apple.com/ca/artist/pēlikel/1579987164"
+        >
+          <SiApplemusic style={{ fontSize: "30px" }} />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://youtube.com/@pelikelmusic?si=MeBUNEMJSoG4PBWN"
+        >
+          <PiYoutubeLogoFill style={{ fontSize: "42px" }} />
+        </Link>
+        <Link target="_blank" href="https://open.anghami.com/02kkBtz74Ub">
+          <Anghami src="/anghami.svg" />
+        </Link>
+      </Wrapper>
+      © {new Date().getFullYear()} Pēlikel. All rights reserved.
+    </Container>
   );
 };
+const Container = styled.div`
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 100%;
+  min-height: 10vh;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 14px;
+
+  @media (max-width: 798px) {
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    left: unset;
+    transform: unset;
+  }
+`;
 const Wrapper = styled.div`
   width: 30vw;
   height: 5vh;
-  position: fixed;
   bottom: 3vh;
-  left: 50%;
-  transform: translate(-50%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  opacity: 0;
+
   @media (max-width: 798px) {
     width: 100vw;
-    position: relative;
-    bottom: 0;
   }
 `;
 
@@ -82,9 +103,8 @@ const Link = styled.a`
 `;
 
 const Anghami = styled.img`
-  width: 25px;
-  height: 25px;
-  background-color: whitesmoke;
+  width: 28px;
+  height: 28px;
   border-radius: 5px;
   padding: 2px;
 `;
