@@ -9,6 +9,15 @@ const Videos = () => {
       <Header />
       <Navbar />
       <ContentWrap>
+        <Title>BITS OF SPACE - LIVE (ACOUSTIC)</Title>
+        <VideoWrap>
+          <iframe
+            src="https://www.youtube.com/embed/joewtAKFY00?si=yQ4XAW-8fa8PV1M8"
+            title="Pēlikel – Aether Voyage (acoustic live at Turbo Haüs – Montreal)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </VideoWrap>
         <Title>AETHER VOYAGE - LIVE (ACOUSTIC)</Title>
         <VideoWrap>
           <iframe
