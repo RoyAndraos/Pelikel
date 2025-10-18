@@ -15,7 +15,7 @@ const Music = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <StyledImage src="/okayMaybeArtwork.svg" />
+            <StyledImage src="/okayMaybeArtwork.webp" />
             <Name>OKAY, MAYBE</Name>
             <StyledPlay />
           </a>

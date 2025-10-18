@@ -54,7 +54,7 @@ const Text = styled.div`
   letter-spacing: 0.1rem;
   max-width: 35vw;
   text-align: justify;
-  font-size: 25px;
+  font-size: 1.5vw;
   line-height: 1.5rem;
   font-family: sans-serif;
   @media (max-width: 798px) {

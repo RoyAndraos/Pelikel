@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 `;
 const ContentWrapper = styled.div`
   line-height: 3vh;
-  font-size: 25px;
+  font-size: 2.5vw;
   height: 80vh;
   letter-spacing: 0.1rem;
   display: flex;
@@ -63,7 +63,7 @@ const Bottom = styled.div`
 
   p {
     margin: 0;
-    font-size: 25px;
+    font-size: 1.5vw;
     @media (max-width: 798px) {
       font-size: 18px;
     }
