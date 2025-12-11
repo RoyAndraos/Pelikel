@@ -11,7 +11,25 @@ const Shows = () => {
       <ContentWrapper>
         <Top>
           <p style={{ fontStyle: "italic" }}>Next show:</p>
-          <p style={{ textDecoration: "underline" }}>TBA</p>
+          <p
+            style={{
+              textDecoration: "underline",
+              display: "flex",
+              gap: "10px",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            January 28, 2026 @ L'Escogriffe
+            <a
+              href="https://thepointofsale.com/billets/pelikel-victorella "
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: "2vw", color: "black", marginTop: "10px" }}
+            >
+              tickets here
+            </a>
+          </p>
         </Top>
         <Bottom>
           <p style={{ fontStyle: "italic" }}>Previously,</p>
@@ -53,7 +71,7 @@ const Top = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 100px;
 `;
 const Bottom = styled.div`
   display: flex;

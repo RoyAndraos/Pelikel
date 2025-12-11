@@ -11,19 +11,19 @@ const About = () => {
       <ContentWrapper>
         <Image src="/about.webp" alt="" />
         <Text>
-          Pēlikel – from the French “pellicule” – is a progressive rock band
-          composed of Joey Semaan, Kevin Semaan, and Roy Andraos. <br />
-          <br />
-          Their debut record Shambles (2021) was the canvas for defining their
-          sound and setting the stage for their evolution.
-          <br />
-          <br /> With it, the band put their music into motion, propelling them
-          from the Beirut music scene to Montreal stages.
-          <br /> With the freedom of progressive rock, their music explores the
-          wind of classical compositions, the textures of indie, and the weight
-          of folk. It blends delicate intimacy and explosive intensity, weaving
-          emotion into motion and spontaneity into structure, reading like a
-          film.
+          Hailing from the Beirut music scene, Pēlikel – from the French
+          pellicule – is a Montreal-based band composed of Joey Semaan, Kevin
+          Semaan, and Roy Andraos. Rooted in progressive rock yet unbound by it,
+          they draw from indie textures, orchestral sensibilities, and the
+          emotional immediacy of folk. <br /> Their music balances delicate
+          intimacy and explosive intensity, carrying a distinctly human pulse.
+          Their almost synesthetic arrangements create a soundworld that is both
+          intimate and widescreen, like film rendered through sound, inviting
+          moments of self-reflective clarity, where emotion is so vivid you
+          become aware of yourself within it. <br /> Following the release of
+          their latest conceptual EP Okay, Maybe (2025), Pēlikel is bringing
+          this sonic intensity to Canadian stages, joined live by Leslie Torck
+          on keys and Étienne Desruisseaux on drums.
         </Text>
         <Footer />
       </ContentWrapper>

@@ -24,31 +24,31 @@ const Footer = ({}) => {
           target="_blank"
           href="https://www.instagram.com/pelikelmusic?utm_source=ig_web_button_share_sheet&igsh=bXJndWp2MW55aTUx"
         >
-          <RiInstagramFill style={{ fontSize: "35px" }} />
+          <RiInstagramFill style={{ cursor: "pointer", fontSize: "35px" }} />
         </Link>
         <Link
           target="_blank"
           href="https://www.tiktok.com/@pelikelmusic?_t=ZS-8ySlXaoS5xZ&_r=1"
         >
-          <AiFillTikTok style={{ fontSize: "35px" }} />
+          <AiFillTikTok style={{ cursor: "pointer", fontSize: "35px" }} />
         </Link>
         <Link
           target="_blank"
           href="https://open.spotify.com/artist/4tiXJDgDwvcHMv77aA9Bb2?si=KcGSUKQuQzuC4WajpX4LrA"
         >
-          <FaSpotify style={{ fontSize: "33px" }} />
+          <FaSpotify style={{ cursor: "pointer", fontSize: "33px" }} />
         </Link>
         <Link
           target="_blank"
           href="https://music.apple.com/ca/artist/pēlikel/1579987164"
         >
-          <SiApplemusic style={{ fontSize: "30px" }} />
+          <SiApplemusic style={{ cursor: "pointer", fontSize: "30px" }} />
         </Link>
         <Link
           target="_blank"
           href="https://youtube.com/@pelikelmusic?si=MeBUNEMJSoG4PBWN"
         >
-          <PiYoutubeLogoFill style={{ fontSize: "42px" }} />
+          <PiYoutubeLogoFill style={{ cursor: "pointer", fontSize: "42px" }} />
         </Link>
         <Link target="_blank" href="https://open.anghami.com/02kkBtz74Ub">
           <Anghami src="/anghami.svg" />
@@ -71,6 +71,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  cursor: pointer;
   font-size: 14px;
 
   @media (max-width: 798px) {
@@ -88,6 +89,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
 
   @media (max-width: 798px) {
     width: 100vw;
@@ -97,13 +99,17 @@ const Wrapper = styled.div`
 const Link = styled.a`
   opacity: 0.7;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
+
   &:hover {
     opacity: 1;
+    cursor: pointer;
   }
 `;
 
 const Anghami = styled.img`
   width: 28px;
+  cursor: pointer;
   height: 28px;
   border-radius: 5px;
   padding: 2px;
