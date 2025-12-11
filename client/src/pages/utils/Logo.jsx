@@ -20,7 +20,7 @@ export const Title = styled.h1`
 export const StyledNavlink = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
-  position: relative;
+  position: fixed;
   right: 2vw;
 
   @media (max-width: 798px) {
