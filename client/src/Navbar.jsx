@@ -51,13 +51,6 @@ const Navbar = ({ navbarRef }) => {
         style={{ display: "flex" }}
       >
         SHOWS
-        {location !== "/shows" && (
-          <NewShow>
-            <FaArrowLeft />
-            {/* add timer here till january 28th at 8pm montreal time */}
-            {timeLeft.days}d {timeLeft.hours}h {timeLeft.mins}m {timeLeft.secs}s
-          </NewShow>
-        )}
       </StyledNavLink>
       <StyledNavLink to={"/about"} $selected={selected}>
         ABOUT

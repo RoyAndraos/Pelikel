@@ -13,13 +13,6 @@ const Contact = () => {
         <a href="mailto:Pelikelmusic@gmail.com" target="_blank">
           Pelikelmusic@gmail.com
         </a>{" "}
-        <br />
-        <a
-          href="https://drive.google.com/drive/folders/1cMr6ualsQcMRowvW8cwPdBFK5rqrsEoq?usp=drive_link"
-          target="_blank"
-        >
-          PRESSKIT
-        </a>
       </ContentWrapper>
       <Footer />
     </div>

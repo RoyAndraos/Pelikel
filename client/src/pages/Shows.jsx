@@ -20,20 +20,13 @@ const Shows = () => {
               flexDirection: "column",
             }}
           >
-            January 28, 2026 @ L'Escogriffe
-            <a
-              href="https://thepointofsale.com/billets/pelikel-victorella "
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ fontSize: "2vw", color: "black", marginTop: "10px" }}
-            >
-              tickets here
-            </a>
+            TBA
           </p>
         </Top>
         <Bottom>
           <p style={{ fontStyle: "italic" }}>Previously,</p>
           <br />
+          <p>January 28, 2026 @ L'Escogriffe</p>
           <p>September 2, 2025 @ Turbo Haüs</p>
           <p>July 20, 2025 @ Turbo Haüs</p>
           <p>May 4, 2025 @ Brasserie Beaubien</p>
