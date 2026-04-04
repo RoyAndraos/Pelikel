@@ -15,6 +15,17 @@ const Music = () => {
       <ContentWrap>
         <ImageInfoWrap>
           <a
+            href="https://www.submithub.com/link/pelikel-ill-just-lay-for-a-while"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src="/justLayArtwork.webp" />
+            <Name>I’LL JUST LAY (FOR A WHILE)</Name>
+            <StyledPlay />
+          </a>
+        </ImageInfoWrap>
+        <ImageInfoWrap>
+          <a
             href="https://www.submithub.com/link/pelikel-okay-maybe"
             target="_blank"
             rel="noopener noreferrer"
@@ -43,17 +54,6 @@ const Music = () => {
           >
             <StyledImage src="/shamblesArtwork.webp" />
             <Name>SHAMBLES</Name>
-            <StyledPlay />
-          </a>
-        </ImageInfoWrap>
-        <ImageInfoWrap>
-          <a
-            href="https://www.submithub.com/link/pelikel-ill-just-lay-for-a-while"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImage src="/justLayArtwork.webp" />
-            <Name>I’LL JUST LAY (FOR A WHILE)</Name>
             <StyledPlay />
           </a>
         </ImageInfoWrap>
