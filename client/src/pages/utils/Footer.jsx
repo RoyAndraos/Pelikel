@@ -5,6 +5,9 @@ import { SiApplemusic } from "react-icons/si";
 import { PiYoutubeLogoFill } from "react-icons/pi";
 import { useEffect, useRef } from "react";
 import { AiFillTikTok } from "react-icons/ai";
+import { ImFacebook2 } from "react-icons/im";
+import { SiBandsintown } from "react-icons/si";
+import { FaBandcamp } from "react-icons/fa6";
 import gsap from "gsap";
 
 const Footer = ({}) => {
@@ -52,6 +55,15 @@ const Footer = ({}) => {
         </Link>
         <Link target="_blank" href="https://open.anghami.com/02kkBtz74Ub">
           <Anghami src="/anghami.svg" />
+        </Link>
+        <Link target="_blank" href="https://www.facebook.com/pelikelmusic/">
+          <ImFacebook2 style={{ cursor: "pointer", fontSize: "30px" }} />
+        </Link>
+        <Link target="_blank" href="https://www.bandsintown.com/a/15628206">
+          <SiBandsintown style={{ cursor: "pointer", fontSize: "30px" }} />
+        </Link>
+        <Link target="_blank" href="https://pelikelmusic.bandcamp.com/">
+          <FaBandcamp style={{ cursor: "pointer", fontSize: "30px" }} />
         </Link>
       </Wrapper>
       © {new Date().getFullYear()} Pēlikel. All rights reserved.

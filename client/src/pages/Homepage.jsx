@@ -1,23 +1,31 @@
 import { useRef } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Navbar from "../Navbar";
 import Footer from "./utils/Footer";
 import MobileNav from "./utils/MobileNav";
 import Header from "./Header";
+const float = keyframes`
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+`;
 const Homepage = ({ open, setOpen, isMobile }) => {
   const navbarRef = useRef(null);
   const burgerRef = useRef(null);
   const titleRef = useRef(null);
+  const handleClick = () => {};
+
   return (
     <div>
       <Container>
         <Header isMobile={isMobile} burgerRef={burgerRef} titleRef={titleRef} />
-        <Wrapper>
-          <Album>OKAY, MAYBE</Album>
+        <Wrapper target="_blank" href="https://linktr.ee/pelikelmusic">
+          <StyledImage src="/justLayArtwork.webp" alt="I'll Just Lay Artwork" />
+          <Album>
+            I'LL JUST LAY <Small>(FOR A WHILE)</Small>
+          </Album>
           <Out>OUT NOW</Out>
-          <Link target="_blank" href="https://linktr.ee/pelikelmusic">
-            Listen HERE
-          </Link>
+          <Link>Listen HERE</Link>
         </Wrapper>
         {open && <MobileNav open={open} setOpen={setOpen} />}
         {!isMobile && <Navbar navbarRef={navbarRef} />}
@@ -26,6 +34,16 @@ const Homepage = ({ open, setOpen, isMobile }) => {
     </div>
   );
 };
+const Small = styled.span`
+  font-size: 25px;
+  display: inline-block;
+  animation: ${float} 3s ease-in-out infinite;
+`;
+const StyledImage = styled.img`
+  width: 10vw;
+  box-shadow: 0 0 20px #0005;
+  cursor: pointer;
+`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,7 +64,7 @@ const Out = styled.h2`
   cursor: default;
   font-family: sans-serif;
 `;
-const Link = styled.a`
+const Link = styled.span`
   text-decoration: underline;
   font-family: sans-serif;
   font-size: 25px;
@@ -56,10 +74,14 @@ const Album = styled.h1`
   font-family: "mom";
   font-size: 40px;
   letter-spacing: 0.1em;
-  cursor: default;
+  cursor: pointer;
   font-weight: normal;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `;
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -68,6 +90,8 @@ const Wrapper = styled.div`
   top: 40%;
   transform: translateY(-50%);
   position: relative;
+  cursor: pointer;
+  text-decoration: unset;
 
   @media (max-width: 798px) {
     display: flex;

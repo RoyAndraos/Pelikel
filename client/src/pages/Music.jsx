@@ -3,6 +3,10 @@ import Navbar from "../Navbar";
 import styled from "styled-components";
 import { FaPlayCircle } from "react-icons/fa";
 import Footer from "./utils/Footer";
+//  ANOTHER FALL - LIVE (CLIP)
+// https://www.youtube.com/watch?v=bNPxPoHRtOg
+// ● BACK TO YOU - LIVE (CLIP)
+// https://youtu.be/cLd4cws8ilc?si=PJv3CcgnhhBb-eCY
 const Music = () => {
   return (
     <Wrapper>
@@ -42,6 +46,18 @@ const Music = () => {
             <StyledPlay />
           </a>
         </ImageInfoWrap>
+        <ImageInfoWrap>
+          <a
+            href="https://www.submithub.com/link/pelikel-ill-just-lay-for-a-while"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src="/justLayArtwork.webp" />
+            <Name>I’LL JUST LAY (FOR A WHILE)</Name>
+            <StyledPlay />
+          </a>
+        </ImageInfoWrap>
+
         <Footer />
       </ContentWrap>
     </Wrapper>
@@ -56,6 +72,7 @@ const StyledImage = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 32px;
+
   transition: 0.1s ease-in-out;
   cursor: pointer;
   &:hover {
@@ -83,11 +100,12 @@ const StyledPlay = styled(FaPlayCircle)`
 `;
 
 const ImageInfoWrap = styled.div`
-  height: 15vw;
+  height: 13vw;
   aspect-ratio: 1 / 1;
   border: 1px solid black;
   border-radius: 32px;
   position: relative;
+  top: -10vh;
   @media (max-width: 798px) {
     height: 60vw;
   }
@@ -95,7 +113,8 @@ const ImageInfoWrap = styled.div`
 const ContentWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 3vw;
+  width: 100%;
+  gap: 5vw;
   @media (max-width: 798px) {
     flex-direction: column;
     align-items: center;

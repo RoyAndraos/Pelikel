@@ -26,6 +26,8 @@ const Shows = () => {
         <Bottom>
           <p style={{ fontStyle: "italic" }}>Previously,</p>
           <br />
+          <p>March 28, 2026 @ Club Soda</p>
+          <p>March 24, 2026 @ La Sotterenea</p>
           <p>January 28, 2026 @ L'Escogriffe</p>
           <p>September 2, 2025 @ Turbo Haüs</p>
           <p>July 20, 2025 @ Turbo Haüs</p>
